@@ -1,0 +1,33 @@
+CREATE Contacts(
+    id INTEGER PRIMARY KEY,
+    FirstName VARCHAR(255),
+    LastName VARCHAR(255),
+    Email VARCHAR(255)
+);
+
+INSERT TO Contacts
+VALUES (1,"Ridwan","Balogun","rib@gm.com");
+
+INSERT TO Contacts (FirstName, LastName,Email) VALUES ("Ridwan","Balogun",""rib@gm.com);
+
+SELECT FirstName, LastName FROM Contacts;
+SELECT FirstName FROM Contacts WHERE id <= 5;
+SELECT * FROM Contacts WHERE FirstName = 'Roya';
+SELECT * FROM Contacts WHERE ID <= 4 AND ZipCode = '90210';
+SELECT Column FROM Table WHERE Condition ORDER BY Column1, Column2, ... [DESC];
+SELECT * FROM Contacts ORDER BY ID DESC;
+
+UPDATE Contacts SET ZipCode = '33333' WHERE ID = 3;
+UPDATE Contacts SET LastName = 'Smith', ZipCode = '44444' WHERE ID = 4;
+
+DELETE FROM <TableName> WHERE <condition>
+DELETE TABLE Contacts;
+
+
+
+INSERT INTO Contacts
+(ID, FirstName, Age, PhoneNumber) 
+VALUES (3, 'Tunde', 30, '080-791-97528'), 
+(4, 'Balogun', 35, '080-791-97527'), 
+(5, 'Ridbay3', 25, '080-791-97786'),
+(6, 'Detoun', 26, '080-791-95636');
